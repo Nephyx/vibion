@@ -1,5 +1,5 @@
 ### BUILD image
-FROM maven:3.6.0-jdk-8-alpine as builder
+FROM maven:3.6.1-jdk-13-alpine as builder
 # create app folder for sources
 RUN mkdir -p /build
 WORKDIR /build
@@ -11,7 +11,7 @@ COPY src /build/src
 # Build application
 RUN mvn package
 
-FROM openjdk:8u201-jdk-alpine as runtime
+FROM openjdk:13-jdk-alpine as runtime
 EXPOSE 8080
 #Set app home folder
 ENV APP_HOME /app
