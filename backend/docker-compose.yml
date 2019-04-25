@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend_build:
+    build: .
+    ports:
+      - "8080:8080"
+  mongo:
+    image: "mongo:4.1-bionic"
+    volumes:
+      - "./data:/data/db"
+    env_file:
+      - docker_mongo.env

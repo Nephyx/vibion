@@ -65,3 +65,9 @@ bin/
 
 ### Mac ###
 .DS_Store
+
+### DB volume ###
+data/
+
+### Docker ###
+*.env
