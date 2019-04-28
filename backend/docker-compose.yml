@@ -1,9 +1,15 @@
 version: '3'
 services:
-  backend_build:
-    build: .
+  eureka-registry:
+    build: ./vibion-eureka-registry
     ports:
-      - "8080:8080"
+      - "8761:8761"
+  users:
+    build: ./vibion-users
+    ports:
+      - "8200:8200"
+    depends_on:
+      - eureka-registry
   mongo:
     image: "mongo:4.1-bionic"
     volumes:

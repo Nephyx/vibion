@@ -12,7 +12,7 @@ COPY src /build/src
 RUN mvn package
 
 FROM openjdk:13-jdk-alpine as runtime
-EXPOSE 8080
+EXPOSE 8200
 #Set app home folder
 ENV APP_HOME /app
 #Possibility to set JVM options (https://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html)
