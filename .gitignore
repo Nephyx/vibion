@@ -41,6 +41,11 @@ HELP.md
 /target/
 !.mvn/wrapper/maven-wrapper.jar
 
+### GRADLE ###
+#############
+.gradle/
+build/
+
 ### STS ###
 ###########
 .apt_generated
