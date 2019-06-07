@@ -1,4 +1,4 @@
-package com.line21k.vibion;
+package com.line21k.vibion.users;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

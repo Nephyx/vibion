@@ -1,0 +1,21 @@
+ext {
+    set('springCloudVersion', "Greenwich.RELEASE")
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+
+    compile 'com.sun.xml.bind:jaxb-core:2.3.0.1'
+    compile 'javax.xml.bind:jaxb-api:2.4.0-b180830.0359'
+    compile 'com.sun.xml.bind:jaxb-impl:2.4.0-b180830.0438'
+
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}

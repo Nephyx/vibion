@@ -1,4 +1,4 @@
-package com.line21k.vibionusers;
+package com.line21k.vibion.eureka.registry;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

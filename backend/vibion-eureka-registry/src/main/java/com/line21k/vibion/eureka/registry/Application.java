@@ -1,4 +1,4 @@
-package com.line21k.vibion;
+package com.line21k.vibion.eureka.registry;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,10 +6,10 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 @SpringBootApplication
 @EnableEurekaServer
-public class VibionApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(VibionApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
