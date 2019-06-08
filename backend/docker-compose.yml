@@ -1,15 +1,22 @@
-version: '3'
+version: '2.1'
 services:
-  eureka-registry:
+  vibion-eureka-registry:
     build: ./vibion-eureka-registry
     ports:
       - "8761:8761"
-  users:
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8761"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+  vibion-users:
     build: ./vibion-users
     ports:
-      - "8200:8200"
+      - "8200:8080"
     depends_on:
-      - eureka-registry
+      vibion-eureka-registry:
+        condition: service_healthy
+      
   mongo:
     image: "mongo:4.1-bionic"
     volumes:
